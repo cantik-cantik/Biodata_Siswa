@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Siswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container" id="formContainer">
+        <div class="form-header">
+            <h1>BIODATA SISWA</h1>
+            <!-- Input Foto -->
+            <div class="photo-upload">
+                <h2 style="color: white; margin-bottom: 15px; font-size: 18px;"></h2>
+                <div class="photo-preview">
+                    <img id="photoPreview" src="#" alt="Preview Foto">
+                    <span>Foto</span>
+                </div>
+                <label for="photo">
+                    <i class="fas fa-camera"></i> Pilih Foto
+                </label>
+                <input id="photo" name="photo" type="file" accept="image/*" required>
+            </div>
+        </div>
+
+        <!-- Kolom Kiri -->
+        <div class="form-column">
+            <form id="registrationForm">
+                <!-- Data Pribadi -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-user-circle"></i> DATA PRIBADI</h3>
+                    <div class="form-group">
+                        <label class="required-field" for="nama_lengkap"><i class="fas fa-user"></i> Nama
+                            Lengkap</label>
+                        <input id="nama_lengkap" name="nama_lengkap" type="text" placeholder="Masukkan nama lengkap"
+                            required>
+                        <div class="error-message" id="nama_lengkap_error">Nama lengkap harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="nama_panggilan"><i class="fas fa-user-tag"></i> Nama
+                            Panggilan</label>
+                        <input id="nama_panggilan" name="nama_panggilan" type="text"
+                            placeholder="Masukkan nama panggilan" required>
+                        <div class="error-message" id="nama_panggilan_error">Nama panggilan harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="agama"><i class="fas fa-pray"></i> Agama</label>
+                        <select id="agama" name="agama" required>
+                            <option value="">Pilih Agama</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Buddha">Buddha</option>
+                        </select>
+                        <div class="error-message" id="agama_error">Agama harus dipilih</div>
+                    </div>
+
+                    <!-- Tempat tanggal lahir-->
+                    <div class="address-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label class="required-field" for="tempat_lahir"><i class="fas fa-map-marker-alt"></i>
+                                Tempat Lahir</label>
+                            <select id="tempat_lahir" name="tempat_lahir" required>
+                                <option value="">Pilih Tempat Lahir</option>
+                                <option value="Banyuwangi">Banyuwangi</option>
+                                <option value="Jember">Jember</option>
+                                <option value="Malang">Malang</option>
+                                <option value="Lumajang">Lumajang</option>
+                                <option value="Probolinggo">Probolinggo</option>
+                                <option value="Pasuruan">Pasuruan</option>
+                                <option value="Situbondo">Situbondo</option>
+                                <option value="Bondowoso">Bondowoso</option>
+                                <option value="Bojonegoro">Bojonegoro</option>
+                                <option value="Tuban">Tuban</option>
+                                <option value="Lamongan">Lamongan</option>
+                                <option value="Gresik">Gresik</option>
+                                <option value="Sidoarjo">Sidoarjo</option>
+                                <option value="Mojokerto">Mojokerto</option>
+                                <option value="Nganjuk">Nganjuk</option>
+                                <option value="Madiun">Madiun</option>
+                                <option value="Magetan">Magetan</option>
+                                <option value="Ngawi">Ngawi</option>
+                                <option value="Ponorogo">Ponorogo</option>
+                                <option value="Pacitan">Pacitan</option>
+                                <option value="Kediri">Kediri</option>
+                                <option value="Tulungagung">Tulungagung</option>
+                                <option value="Blitar">Blitar</option>
+                                <option value="Trenggalek">Trenggalek</option>
+                            </select>
+                            <div class="error-message" id="tempat_lahir_error">Tempat lahir harus dipilih</div>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label class="required-field" for="tanggal_lahir"><i class="fas fa-calendar-alt"></i>
+                                Tanggal Lahir</label>
+                            <input id="tanggal_lahir" name="tanggal_lahir" type="date" required>
+                            <div class="error-message" id="tanggal_lahir_error">Tanggal lahir harus diisi</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="anak_ke"><i class="fas fa-child"></i> Anak ke-</label>
+                        <select id="anak_ke" name="anak_ke" required>
+                            <option value="">Pilih Anak ke-</option>
+                            <option value="1 (satu)">1</option>
+                            <option value="2 (dua)">2</option>
+                            <option value="3 (tiga)">3</option>
+                            <option value="4 (empat)">4</option>
+                            <option value="5 (lima)">5</option>
+                            <option value="6 (enam)">6</option>
+                            <option value="7 (tujuh)">7</option>
+                            <option value="8 (delapan)">8</option>
+                            <option value="9 (sembilan)">9</option>
+                            <option value="10 (sepuluh)">10</option>
+                            <option value="lebih">Lebih dari 10</option>
+                        </select>
+                        <div class="error-message" id="anak_ke_error">Anak ke- harus dipilih</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="jumlah_saudara"><i class="fas fa-users"></i> Jumlah
+                            Saudara</label>
+                        <select id="jumlah_saudara" name="jumlah_saudara" required>
+                            <option value="">Pilih Jumlah Saudara</option>
+                            <option value="0">Tidak ada</option>
+                            <option value="1 (satu)">1</option>
+                            <option value="2 (dua)">2</option>
+                            <option value="3 (tiga)">3</option>
+                            <option value="4 (empat)">4</option>
+                            <option value="5 (lima)">5</option>
+                            <option value="6 (enam)">6</option>
+                            <option value="7 (tujuh)">7</option>
+                            <option value="8 (delapan)">8</option>
+                            <option value="9 (sembilan)">9</option>
+                            <option value="10 (sepuluh)">10</option>
+                            <option value="lebih">Lebih dari 10</option>
+                        </select>
+                        <div class="error-message" id="jumlah_saudara_error">Jumlah saudara harus dipilih</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="no_hp"><i class="fas fa-phone"></i> No. HP</label>
+                        <input id="no_hp" name="no_hp" type="tel" placeholder="Masukkan nomor HP" required>
+                        <div class="error-message" id="no_hp_error">Nomor HP harus diisi</div>
+                    </div>
+                </div>
+
+                <!-- Data Sekolah -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-school"></i> DATA SEKOLAH</h3>
+                    <div class="form-group">
+                        <label class="required-field" for="no_induk"><i class="fas fa-id-card"></i> No. Induk</label>
+                        <input id="no_induk" name="no_induk" type="text" placeholder="Masukkan nomor induk" required>
+                        <div class="error-message" id="no_induk_error">Nomor induk harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="nisn"><i class="fas fa-id-card-alt"></i> NISN</label>
+                        <input id="nisn" name="nisn" type="text" placeholder="Masukkan NISN" required>
+                        <div class="error-message" id="nisn_error">NISN harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="kelas"><i class="fas fa-graduation-cap"></i> Kelas</label>
+                        <select id="kelas" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="X (Sepuluh)">X (Sepuluh)</option>
+                            <option value="XI (Sebelas)">XI (Sebelas)</option>
+                            <option value="XII (Dua belas)">XII (Dua belas)</option>
+                        </select>
+                        <div class="error-message" id="kelas_error">Kelas harus dipilih</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="jurusan"><i class="fas fa-book"></i> Jurusan</label>
+                        <select id="jurusan" name="jurusan" required>
+                            <option value="">Pilih Jurusan</option>
+                            <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                            <option value="Multimedia">Keperawatan</option>
+                            <option value="Akuntansi">Teknik Pengelasan</option>
+                            <option value="Pemasaran">Teknik Kendaraan Ringan</option>
+                            <option value="Tata Boga">Teknik Sepeda Motor</option>
+                        </select>
+                        <div class="error-message" id="jurusan_error">Jurusan harus dipilih</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="form-column">
+            <form id="registrationForm">
+                <!-- Data Orang Tua -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-users"></i> DATA ORANG TUA</h3>
+                    <div class="form-group">
+                        <label class="required-field" for="nama_ayah"><i class="fas fa-male"></i> Nama Ayah</label>
+                        <input id="nama_ayah" name="nama_ayah" type="text" placeholder="Masukkan nama ayah" required>
+                        <div class="error-message" id="nama_ayah_error">Nama ayah harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="pekerjaan_ayah"><i class="fas fa-briefcase"></i> Pekerjaan
+                            Ayah</label>
+                        <select id="pekerjaan_ayah" name="pekerjaan_ayah" required>
+                            <option value="">Pilih Pekerjaan</option>
+                            <option value="petani">Petani</option>
+                            <option value="buruh_harian">Buruh Harian</option>
+                            <option value="guru">Guru</option>
+                            <option value="tentara">Tentara</option>
+                            <option value="polisi">Polisi</option>
+                            <option value="nelayan">Nelayan</option>
+                            <option value="wiraswasta">Wiraswasta</option>
+                            <option value="sopir">Sopir</option>
+                            <option value="montir">Montir</option>
+                            <option value="pegawai_negeri">Pegawai Negeri</option>
+                            <option value="programmer">Programmer</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="pengacara">Pengacara</option>
+                        </select>
+                        <div class="error-message" id="pekerjaan_ayah_error">Pekerjaan ayah harus dipilih</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="pendidikan_ayah"><i class="fas fa-user-graduate"></i>
+                            Pendidikan Ayah</label>
+                        <select id="pendidikan_ayah" name="pendidikan_ayah" required>
+                            <option value="">Pilih Pendidikan</option>
+                            <option value="SD">SD</option>
+                            <option value="SMP">SMP</option>
+                            <option value="SMA/SMK">SMA/SMK</option>
+                            <option value="D1-D3">D1-D3</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
+                        </select>
+                        <div class="error-message" id="pendidikan_ayah_error">Pendidikan ayah harus dipilih</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="nama_ibu"><i class="fas fa-female"></i> Nama Ibu</label>
+                        <input id="nama_ibu" name="nama_ibu" type="text" placeholder="Masukkan nama ibu" required>
+                        <div class="error-message" id="nama_ibu_error">Nama ibu harus diisi</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="pekerjaan_ibu"><i class="fas fa-briefcase"></i> Pekerjaan
+                            Ibu</label>
+                        <select id="pekerjaan_ibu" name="pekerjaan_ibu" required>
+                            <option value="">Pilih Pekerjaan</option>
+                            <option value="ibu rumah tangga">Ibu Rumah Tangga</option>
+                            <option value="guru">Guru</option>
+                            <option value="perias/mua">Perias/MUA</option>
+                            <option value="dokter">Dokter</option>
+                            <option value="perawat">Perawat</option>
+                            <option value="pengacara">Pengacara</option>
+                            <option value="dosen">Dosen</option>
+                            <option value="pengusaha">Pengusaha</option>
+                            <option value="jurnalis">Jurnalis</option>
+                            <option value="pramugari">Pramugari</option>
+                        </select>
+                        <div class="error-message" id="pekerjaan_ibu_error">Pekerjaan ibu harus dipilih</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required-field" for="pendidikan_ibu"><i class="fas fa-user-graduate"></i>
+                            Pendidikan Ibu</label>
+                        <select id="pendidikan_ibu" name="pendidikan_ibu" required>
+                            <option value="">Pilih Pendidikan</option>
+                            <option value="SD">SD</option>
+                            <option value="SMP">SMP</option>
+                            <option value="SMA/SMK">SMA/SMK</option>
+                            <option value="D1-D3">D1-D3</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
+                        </select>
+                        <div class="error-message" id="pendidikan_ibu_error">Pendidikan ibu harus dipilih</div>
+                    </div>
+                </div>
+
+                <!-- Kontak dan Alamat -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-home"></i> KONTAK DAN ALAMAT</h3>
+
+                    <div class="form-group">
+                        <label class="required-field" for="kecamatan"><i class="fas fa-map-marker-alt"></i>
+                            Kecamatan</label>
+                        <select id="kecamatan" name="kecamatan" required>
+                            <option value="">Pilih Kecamatan</option>
+                            <option value="Banyuwangi">Banyuwangi</option>
+                            <option value="Glagah">Glagah</option>
+                            <option value="Giri">Giri</option>
+                            <option value="Kabat">Kabat</option>
+                            <option value="Rogojampi">Rogojampi</option>
+                            <option value="Blimbingsari">Blimbingsari</option>
+                            <option value="Genteng">Genteng</option>
+                            <option value="Kalibaru">Kalibaru</option>
+                            <option value="Glenmore">Glenmore</option>
+                            <option value="Srono">Srono</option>
+                            <option value="Cluring">Cluring</option>
+                            <option value="Muncar">Muncar</option>
+                            <option value="Tegaldlimo">Tegaldlimo</option>
+                            <option value="Purwoharjo">Purwoharjo</option>
+                            <option value="Gambiran">Gambiran</option>
+                            <option value="Siliragung">Siliragung</option>
+                            <option value="Bangorejo">Bangorejo</option>
+                            <option value="Pesanggaran">Pesanggaran</option>
+                            <option value="Sempu">Sempu</option>
+                            <option value="Songgon">Songgon</option>
+                            <option value="Licin">Licin</option>
+                            <option value="Wongsorejo">Wongsorejo</option>
+                            <option value="Singojuruh">Singojuruh</option>
+                            <option value="Kalipuro">Kalipuro</option>
+                            <option value="Tegalsari">Tegalsari</option>
+                        </select>
+                        <div class="error-message" id="kecamatan_error">Kecamatan harus dipilih</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="desa"><i class="fas fa-map-marker"></i>
+                            Desa/Kelurahan</label>
+                        <select id="desa" name="desa" required>
+                            <option value="">Pilih Kecamatan</option>
+                            <option value="Banyuwangi">Banyuwangi</option>
+                            <option value="Glagah">Glagah</option>
+                            <option value="Giri">Giri</option>
+                            <option value="Kabat">Kabat</option>
+                            <option value="Rogojampi">Rogojampi</option>
+                            <option value="Blimbingsari">Blimbingsari</option>
+                            <option value="Genteng">Genteng</option>
+                            <option value="Kalibaru">Kalibaru</option>
+                            <option value="Glenmore">Glenmore</option>
+                            <option value="Srono">Srono</option>
+                            <option value="Cluring">Cluring</option>
+                            <option value="Muncar">Muncar</option>
+                            <option value="Tegaldlimo">Tegaldlimo</option>
+                            <option value="Purwoharjo">Purwoharjo</option>
+                            <option value="Gambiran">Gambiran</option>
+                            <option value="Siliragung">Siliragung</option>
+                            <option value="Bangorejo">Bangorejo</option>
+                            <option value="Pesanggaran">Pesanggaran</option>
+                            <option value="Sempu">Sempu</option>
+                            <option value="Songgon">Songgon</option>
+                            <option value="Licin">Licin</option>
+                            <option value="Wongsorejo">Wongsorejo</option>
+                            <option value="Singojuruh">Singojuruh</option>
+                            <option value="Kalipuro">Kalipuro</option>
+                            <option value="Tegalsari">Tegalsari</option>
+                        </select>
+                        <div class="error-message" id="desa_error">Desa/kelurahan harus diisi</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required-field" for="jalan"><i class="fas fa-road"></i> Jalan</label>
+                        <input type="text" id="jalan" name="jalan" placeholder="Masukkan nama jalan" required>
+                        <div class="error-message" id="jalan_error">Nama jalan harus diisi</div>
+                    </div>
+
+                    <div class="address-row">
+                        <div class="form-group rt-group">
+                            <label class="required-field" for="rt"><i class="fas fa-map-pin"></i> RT</label>
+                            <select id="rt" name="rt" required>
+                                <option value="">Pilih RT</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                            </select>
+                            <div class="error-message" id="rt_error">RT harus dipilih</div>
+                        </div>
+                        <div class="form-group rw-group">
+                            <label class="required-field" for="rw"><i class="fas fa-map-pin"></i> RW</label>
+                            <select id="rw" name="rw" required>
+                                <option value="">Pilih RW</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                            </select>
+                            <div class="error-message" id="rw_error">RW harus dipilih</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lokasi"><i class="fas fa-map-marked-alt"></i> Pin Lokasi
+                        Rumah</label>
+                    <div id="map"
+                        style="height: 300px; width: 100%; border: 1px solid #ddd; border-radius: 5px; margin-top: 10px;">
+                    </div>
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                    <small class="text-muted">Geser pin ke lokasi rumah Anda</small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="form-footer">
+        <button class="btn" type="submit" form="registrationForm">
+            <i class="fas fa-paper-plane"></i> KIRIM BIODATA
+        </button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+
+    <!-- Data hasil -->
+    <div class="data-container" id="dataContainer">
+        <div class="data-header">
+            <p>MAJELIS PENDIDIKAN DASAR DAN MENENGAH DAERAH MUHAMMADIYAH BANYUWANGI</p>
+            <h2>SMK MUHAMMADIYAH 6 ROGOJAMPI</h2>
+            <p>Website : www.smkmuh6rgj.sch.id / Email : webmaster@smkmuh6rgj.sch.id</p>
+            <p>Jln.KH.Hasyim Asy'ari No.38 Rogojampi Telp./Fax : (0333) 631793 Banyuwangi 684662</p>
+
+        </div>
+
+        <div class="data-photo">
+            <img id="dataPhoto" src="#" alt="Foto Siswa">
+        </div>
+
+        <div class="data-section">
+            <div class="data-row">
+                <div class="data-label">Nama Lengkap</div>
+                <div class="data-value" id="dataNamaLengkap"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Nama Panggilan</div>
+                <div class="data-value" id="dataNamaPanggilan"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Agama</div>
+                <div class="data-value" id="dataAgama"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">TTL</div>
+                <div class="data-value" id="dataTtl"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Anak ke-</div>
+                <div class="data-value" id="dataAnakKe"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Jumlah Saudara</div>
+                <div class="data-value" id="dataJumlahSaudara"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">No. HP</div>
+                <div class="data-value" id="dataNoHp"></div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <div class="data-row">
+                <div class="data-label">No. Induk</div>
+                <div class="data-value" id="dataNoInduk"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">NISN</div>
+                <div class="data-value" id="dataNisn"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Kelas</div>
+                <div class="data-value" id="dataKelas"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Jurusan</div>
+                <div class="data-value" id="dataJurusan"></div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <div class="data-row">
+                <div class="data-label">Nama Ayah</div>
+                <div class="data-value" id="dataNamaAyah"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Pekerjaan Ayah</div>
+                <div class="data-value" id="dataPekerjaanAyah"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Pendidikan Ayah</div>
+                <div class="data-value" id="dataPendidikanAyah"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Nama Ibu</div>
+                <div class="data-value" id="dataNamaIbu"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Pekerjaan Ibu</div>
+                <div class="data-value" id="dataPekerjaanIbu"></div>
+            </div>
+            <div class="data-row">
+                <div class="data-label">Pendidikan Ibu</div>
+                <div class="data-value" id="dataPendidikanIbu"></div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <div class="data-row">
+                <div class="data-label">Alamat Lengkap</div>
+                <div class="data-value" id="dataAlamat"></div>
+            </div>
+    </div>
+    </div>
+
+    <div style="text-align: center;">
+        <button class="btn-print" onclick="backToForm()"><i class="fas fa-edit"></i> Edit Kembali</button>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/js.js"></script>
+</body>
+
+</html>
